@@ -1,13 +1,97 @@
-body {
+@import-normalize;
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  background: #121118;
+
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: 'Play';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 145%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 145%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #fff;
+
+  transition: 0.5s ease 0s;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+input {
+  color: #fff !important;
+}
+
+.container {
+  padding: 20px;
+  margin: auto;
+  max-width: 1400px;
+}
+
+
+/*FONT-FAMILY*/
+
+@font-face {
+  font-family: 'Play';
+  font-weight: normal;
+  src: local('Play'), url("./fonts/Play-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Play';
+  font-weight: bold;
+  src: local('Play'), url("./fonts/Play-Bold.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'RubikGlitch';
+  font-weight: bold;
+  src: local('RubikGlitch'), url("./fonts/RubikGlitch-Regular.woff") format('woff');
+}
+
+/*******/
+
+::-webkit-scrollbar {
+  width: 6px;
+  /* ширина для вертикального скролла */
+  height: 4px;
+  /* высота для горизонтального скролла */
+  background-color: #0c0c0c10;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background: none;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 576px) {
+  a {
+    font-size: 14px;
+  }
 }
