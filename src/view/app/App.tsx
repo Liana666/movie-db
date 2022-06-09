@@ -11,6 +11,7 @@ import { MainPage } from "../main/MainPage/MainPage";
 import { SearchPage } from "../search/SearchPage/SearchPage";
 import styles from "./App.module.scss";
 
+
 export const App = () => {
   return (
     <div className="container">
