@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Provider } from "react-redux";
-import { store } from "../../app/store";
+import { store } from "../../store/store";
 import { App } from "./App";
 import { MemoryRouter } from "react-router-dom";
 
