@@ -11,12 +11,11 @@ import { MainPage } from "../main/MainPage/MainPage";
 import { SearchPage } from "../search/SearchPage/SearchPage";
 import styles from "./App.module.scss";
 
-
 export const App = () => {
   return (
     <div className="container">
       <HeaderContainer />
-      <main>
+      <main data-testid="main-page">
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />

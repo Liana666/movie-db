@@ -1,10 +1,19 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
+import { movieApi } from './api/movieApi';
+import { genresApi } from './api/genresApi';
+import { combineReducers } from '@reduxjs/toolkit';
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  [movieApi.reducerPath]: movieApi.reducer,
+  [genresApi.reducerPath]: genresApi.reducer
+})
 
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(movieApi.middleware, genresApi.middleware)
 });
 
 export type AppDispatch = typeof store.dispatch;
