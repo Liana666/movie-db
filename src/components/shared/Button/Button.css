@@ -1,0 +1,43 @@
+.btn {
+    padding: 10px 30px;
+    height: auto;
+
+    margin-bottom: 15px;
+
+    outline: none;
+    border: 1px solid #fff;
+    background: none;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 133.5%;
+    white-space: nowrap;
+    color: #fff;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: 0.5s ease 0s;
+  }
+
+  .btn--large{
+    width: 100%;
+  }
+
+  .btn--small{
+    width: 200px;
+  }
+
+  
+  .btn:hover {
+    cursor: pointer;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.822);
+
+    transition: 0.5s ease 0s;
+  }
+  
+  .btn:disabled,
+  .btn[disabled]{
+    opacity: 0.4;
+  }

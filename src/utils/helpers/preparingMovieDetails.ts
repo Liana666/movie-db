@@ -9,7 +9,7 @@ export const preparingMovieDetails = (poster_path: string, overview: string, ori
     const allGenres = getGenres();
     const titleStart = original_title.split(" ")[0];
 
-    const imgSrc = "https://image.tmdb.org/t/p/original/" + poster_path;
+    const imgSrc = "https://image.tmdb.org/t/p/original" + poster_path;
     const desciption = overview.slice(0, 150) + "...";
     const titleEn =
     titleStart === "The" || titleStart.length < 7

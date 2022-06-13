@@ -13,7 +13,7 @@ import styles from "./App.module.scss";
 
 export const App = () => {
   return (
-    <div className="container">
+    <>
       <HeaderContainer />
       <main data-testid="main-page">
         <Routes>
@@ -35,6 +35,6 @@ export const App = () => {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </main>
-    </div>
+    </>
   );
 };
