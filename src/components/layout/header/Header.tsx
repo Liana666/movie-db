@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="container">
       <NavLink to="/">
         <div className={styles.logo}>Movie</div>
       </NavLink>

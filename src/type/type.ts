@@ -15,3 +15,7 @@ export type ItemMovie = {
    vote_count?: number
 }
 
+export type ItemGenres = {
+   name: string
+   id: number
+}
