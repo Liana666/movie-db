@@ -1,3 +1,13 @@
+import { NavbarContainer } from "../../../components/layout";
+import { FetchSearchMovie } from "../FetchSearchMovie/FetchSearchMovie";
+
 export const SearchPage = () => {
-  return <div data-testid="search-link">SearchPage</div>;
+  return (
+    <>
+      <NavbarContainer />
+      <div className="container">
+        <FetchSearchMovie />
+      </div>
+    </>
+  );
 };

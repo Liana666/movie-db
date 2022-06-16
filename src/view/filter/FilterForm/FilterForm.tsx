@@ -1,8 +1,5 @@
-import { Button } from "../../../components/shared/Button/Button";
-import { Input } from "../../../components/shared/Input/Input";
-
 import { ItemGenres } from "../../../type/type";
-
+import { Button, Input } from "../../../components/shared";
 import styles from "./FilterForm.module.scss";
 
 type Props = {

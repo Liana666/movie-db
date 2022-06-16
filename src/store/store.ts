@@ -1,3 +1,4 @@
+import { searchApi } from './api/searchApi';
 import { filterApi } from './api/filterApi';
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
@@ -9,13 +10,14 @@ const rootReducer = combineReducers({
   counter: counterReducer,
   [movieApi.reducerPath]: movieApi.reducer,
   [genresApi.reducerPath]: genresApi.reducer,
-  [filterApi.reducerPath]: filterApi.reducer
+  [filterApi.reducerPath]: filterApi.reducer,
+  [searchApi.reducerPath]: searchApi.reducer
 })
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(movieApi.middleware, genresApi.middleware, filterApi.middleware)
+    getDefaultMiddleware().concat(movieApi.middleware, genresApi.middleware, filterApi.middleware, searchApi.middleware)
 });
 
 export type AppDispatch = typeof store.dispatch;
