@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import { FilterFormContainer } from "../../../view/filter/FilterForm/FilterFormContainer";
+import { SearchFormContainer } from "../../../view/search/SearchForm/SearchFormContainer";
 
 import styles from "./Navbar.module.scss";
 
@@ -22,9 +23,7 @@ export const Navbar: React.FC<Props> = ({ isOpen, setOpen }) => {
         </div>
         <FilterFormContainer />
         <hr style={{ marginBottom: 15, color: "#858588" }} />
-        {/* <SearchFormContainer />
-        <hr style={{ marginBottom: 15, color: "#858588" }} />
-        <UpdateAnimeContainer />  */}
+        <SearchFormContainer />
       </div>
     </div>
   );

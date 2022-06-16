@@ -1,7 +1,7 @@
-import { NavbarContainer } from "../../../components/layout/navbar/NavbarContainer";
+import { NavbarContainer } from "../../../components/layout";
 import { FetchFilterMovie } from "../FetchFilterMovie/FetchFilterMovie";
 
-export const Filterpage = () => {
+export const FilterPage = () => {
   return (
     <>
       <NavbarContainer />
