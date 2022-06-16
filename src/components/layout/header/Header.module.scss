@@ -1,0 +1,90 @@
+header {
+    padding: 0 20px;
+    max-width: 1400px;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    z-index: 2;
+}
+
+.header {
+    padding: 20px 0;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 20px;
+    font-family: 'Play';
+
+&__logo {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 145%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #fff;
+
+    transition: 0.5s ease 0s;
+
+    :hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 576px) {
+            font-size: 18px;
+        }
+}
+
+&__links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 133.5%;
+        color: #fff;
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+        transition: 0.5s ease 0s;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+}
+
+&__linksMob {
+    display: flex;
+    gap: 20px;
+    
+}
+
+&__email {
+    font-size: 16px;
+}
+
+&__main {
+    @media (max-width: 1540px) {
+        padding: 10px 0px 20px 67px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 10px 0px 20px 40px;
+    }
+}
+
+
+&__linksMob {
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+}

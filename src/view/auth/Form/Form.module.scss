@@ -1,0 +1,30 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.input--login {
+   padding: 15px;
+
+   height: 45px;
+   background: #fff8f81a;
+   border: none;
+   outline: none;
+
+   font-style: normal;
+   font-weight: 500;
+   font-size: 13px;
+   line-height: 133.5%;
+   color: #fff;
+   letter-spacing: 0.2em;
+   text-transform: uppercase;
+}
+
+.input::placeholder {
+   color: #fff;
+}
+
+.input-error {
+   background: #f129551a;
+}
