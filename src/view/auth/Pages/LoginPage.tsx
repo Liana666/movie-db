@@ -3,21 +3,23 @@ import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { LoginAndRegister } from "../../../hoc/LoginAndRegister";
 
-import gif from "../../img/smile.gif";
+import styles from "./AuthPages.module.scss";
+
+import gif from "../../../img/smile.gif";
 
 export const LoginPage = () => {
   return (
     <>
-      <img className="videoImg" src={gif} alt="" />
+      <img className={styles.videoImg} src={gif} alt="" />
 
-      <div className="videoContainer">
-        <div className="videoWrapper">
+      <div className={styles.videoContainer}>
+        <div className={styles.videoWrapper}>
           <LoginAndRegister
             btnValue="Login"
             firebaseFunction={signInWithEmailAndPassword}
           />
 
-          <p className="linkRegister">
+          <p className={styles.linkRegister}>
             Or <Link to="/register">register</Link>
           </p>
         </div>
