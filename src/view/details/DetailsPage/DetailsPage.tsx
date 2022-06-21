@@ -1,3 +1,5 @@
+import { DetailsContainer } from "../FetchDetailsMovie/DetailsContainer";
+
 export const DetailsPage = () => {
-  return <div>Details</div>;
+  return <DetailsContainer />;
 };

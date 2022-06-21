@@ -55,6 +55,10 @@ input {
   transition: 0.5s ease 0s;
 }
 
+hr {
+  height: 100%;
+}
+
 /*FONT-FAMILY*/
 
 @font-face {

@@ -4,6 +4,7 @@
     height: auto;
 
     background: #191721;
+    overflow: hidden;
 
     @media  (max-width: 540px) {
         flex-wrap: wrap;
@@ -73,7 +74,6 @@
 }
 
 &__titleWrapper {
-    margin: 30px 0;
 
     @media  (max-width: 540px) {
         margin-bottom: 0;
