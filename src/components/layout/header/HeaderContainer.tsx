@@ -22,7 +22,7 @@ export const HeaderContainer = () => {
         dispatch(login(userAuth.email));
       }
     });
-  }, [auth, dispatch]);
+  }, [dispatch]);
 
   const signOut = () => {
     auth.signOut();

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import { ItemMovie } from "../../../type/type";
+import { Button } from "../Button/Button";
 import { preparingMovieDetails } from "../../../utils/helpers/preparingMovieDetails";
 import styles from "./Item.module.scss";
 
@@ -16,7 +17,7 @@ export const Item: React.FC<ItemMovie> = ({
   title,
   vote_average,
 }) => {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { imgSrc, desciption, titleEn, genres } = preparingMovieDetails(
     poster_path,
@@ -64,11 +65,11 @@ export const Item: React.FC<ItemMovie> = ({
         <div data-testid="overview" className={styles.cart__descr}>
           {desciption}
         </div>
-        {/* <Button
+        <Button
           text="More"
           onClick={() => navigate(`/details/${id}`)}
           size="more"
-        /> */}
+        />
       </div>
       <div className={styles.cart__cover}>
         <div data-testid="titleEn" className={styles.cart__origTitle}>

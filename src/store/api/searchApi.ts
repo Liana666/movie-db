@@ -15,7 +15,7 @@ export const searchApi = createApi({
    endpoints: (build) => ({
       searchMovies: build.query({
          query: ({ page, title }) => `movie?api_key=${apiKey}&page=${page}&query=${title}`,
-         transformResponse: (response: Response) => {
+         transformResponse: (response: any) => {
             return response.results;
          }
       })

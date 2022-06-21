@@ -1,3 +1,4 @@
+import { number } from 'prop-types';
 import { getGenres } from './getGenres';
 
 type Genre = {
