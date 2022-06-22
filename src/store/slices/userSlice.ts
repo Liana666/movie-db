@@ -37,7 +37,7 @@ export const userSlice = createSlice({
          state.email = '';
       },
 
-      addFavoriteAnime(state, action) {
+      addFavoritesMovie(state, action) {
          if (state.favorites.length === 0) {
             state.favorites.push({
                email: state.email,
@@ -57,7 +57,7 @@ export const userSlice = createSlice({
          }
       },
 
-      removeFavoriteAnime(state, action) {
+      removeFavoritesMovie(state, action) {
          state.favorites.forEach(item => {
             if (item.email === state.email) {
                const currentId = item.ids.indexOf(action.payload.id);
@@ -107,4 +107,5 @@ export const userSlice = createSlice({
    }
 })
 
-export const { login, logout, addFavoriteAnime, removeFavoriteAnime, addHistory, removeHistory } = userSlice.actions;
+export const userReducer = userSlice.reducer;
+export const { login, logout, addFavoritesMovie, removeFavoritesMovie, addHistory, removeHistory } = userSlice.actions;

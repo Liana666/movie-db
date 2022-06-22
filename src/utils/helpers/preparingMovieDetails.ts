@@ -6,7 +6,7 @@ type Genre = {
     name: string
 }
 
-export const preparingMovieDetails = (poster_path: string, overview: string, original_title: string, genre_ids: number[]) => {
+export const preparingMovieDetails = (poster_path: string, overview: string, original_title: string, genre_ids?: number[]) => {
     const allGenres = getGenres();
     const titleStart = original_title.split(" ")[0];
 
@@ -16,8 +16,8 @@ export const preparingMovieDetails = (poster_path: string, overview: string, ori
     titleStart === "The" || titleStart.length < 7
         ? original_title.split(" ", 2).join(" ")
         : original_title.split(" ", 1).join(" ");
-    const genresOgjects = genre_ids.map(genre => allGenres.filter((item: Genre) => item.id === genre));
-    const genres = genresOgjects.flat().map(item => item.name);
+    const genresOgjects = genre_ids?.map(genre => allGenres.filter((item: Genre) => item.id === genre));
+    const genres = genresOgjects?.flat().map(item => item.name);
 
     return {
         imgSrc,

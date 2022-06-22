@@ -30,8 +30,12 @@ export const Header: React.FC<Props> = ({ emailUser, pathname, signOut }) => {
         {emailUser ? (
           <>
             <div className={style.header__linksMob}>
-              <NavLink to="/favorites">Favorites</NavLink>
-              <NavLink to="/history">History</NavLink>
+              <NavLink data-testid="favorites-link" to="/favorites">
+                Favorites
+              </NavLink>
+              <NavLink data-testid="history-link" to="/history">
+                History
+              </NavLink>
             </div>
             <div className={style.header__links}>
               <span>Hi, {emailUser}</span>
@@ -43,10 +47,14 @@ export const Header: React.FC<Props> = ({ emailUser, pathname, signOut }) => {
         ) : (
           <div className={style.header__links}>
             <div className={style.header__btnLogout}>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink data-testid="login-link" to="/login">
+                Login
+              </NavLink>
             </div>
             <div className={style.header__btnLogout}>
-              <NavLink to="/register">Register</NavLink>
+              <NavLink data-testid="register-link" to="/register">
+                Register
+              </NavLink>
             </div>
           </div>
         )}

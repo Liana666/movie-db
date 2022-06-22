@@ -55,8 +55,18 @@ input {
   transition: 0.5s ease 0s;
 }
 
-hr {
-  height: 100%;
+.grid {
+  margin-bottom: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /*FONT-FAMILY*/

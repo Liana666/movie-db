@@ -1,4 +1,5 @@
 import { preparingMovieDetails } from "../../../utils/helpers/preparingMovieDetails";
+import { AddFavoriteContainer } from "../../favorites/AddFavorites/AddFavoritesContainer";
 
 import { DetailsMovie } from "../../../type/type";
 
@@ -9,6 +10,7 @@ export const Details: React.FC<DetailsMovie> = ({
   genres,
   original_title,
   video,
+  id,
   status,
   overview,
   poster_path,
@@ -16,7 +18,6 @@ export const Details: React.FC<DetailsMovie> = ({
   title,
   vote_average,
 }) => {
-  console.log(video);
   return (
     <div className={style.single}>
       <div className={style.single__banner}>
@@ -34,7 +35,7 @@ export const Details: React.FC<DetailsMovie> = ({
             </div>
             <div className="single__info">
               <div>
-                {/* <AddFavoriteContainer id={id} /> */}
+                <AddFavoriteContainer id={id} />
                 <div className={style.single__title}>
                   <span>{title}</span>
                 </div>
@@ -64,17 +65,22 @@ export const Details: React.FC<DetailsMovie> = ({
                   </div>
                 )}
               </div>
+              <ul className={style.single__genres}>
+                {genres.map((genre) => (
+                  <li key={genre.id}>{genre.name}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div style={{ paddingTop: 40 }} className="container">
+      {/* <div style={{ paddingTop: 40 }} className="container">
         <ul className={style.single__genres}>
           {genres.map((genre) => (
             <li key={genre.id}>{genre.name}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

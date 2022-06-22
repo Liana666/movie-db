@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-import { ItemMovie } from "../../../type/type";
+import { DetailsMovie, ItemMovie } from "../../../type/type";
 import { Button } from "../Button/Button";
+import { AddFavoriteContainer } from "../../../view/favorites/AddFavorites/AddFavoritesContainer";
 import { preparingMovieDetails } from "../../../utils/helpers/preparingMovieDetails";
 import styles from "./Item.module.scss";
 
@@ -29,7 +30,7 @@ export const Item: React.FC<ItemMovie> = ({
   return (
     <div data-testid="movie" className={styles.cart}>
       <div className={styles.cart__info}>
-        {/* <AddFavoriteContainer id={id} /> */}
+        <AddFavoriteContainer id={id} />
         <div className={styles.cart__titleWrapper}>
           <Link to={`/details/${id}`}>
             <div className={styles.cart__title}>
@@ -50,11 +51,11 @@ export const Item: React.FC<ItemMovie> = ({
         </div>
 
         <ul className={styles.cart__genres}>
-          {genres.length > 0 && (
+          {genres && genres.length > 0 && (
             <li className="styles.cart__genres-title">Genres: </li>
           )}
 
-          {genres.map((genre, index, array) => (
+          {genres?.map((genre, index, array) => (
             <li data-testid="genre" key={genre}>
               {genre}
               {index !== array.length - 1 && ","}

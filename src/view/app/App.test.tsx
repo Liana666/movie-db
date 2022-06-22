@@ -14,18 +14,10 @@ test("routing check test", () => {
     </Provider>
   );
 
-  const favoritesLink = screen.getByTestId("favorites-link");
-  const historyLink = screen.getByTestId("history-link");
   const loginLink = screen.getByTestId("login-link");
   const registerLink = screen.getByTestId("register-link");
 
   expect(screen.getByTestId("main-page")).toBeInTheDocument();
-
-  fireEvent.click(historyLink);
-  expect(screen.getByTestId("history-page")).toBeInTheDocument();
-
-  fireEvent.click(favoritesLink);
-  expect(screen.getByTestId("favorites-page")).toBeInTheDocument();
 
   fireEvent.click(loginLink);
   expect(screen.getByTestId("login-page")).toBeInTheDocument();

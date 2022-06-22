@@ -2,7 +2,8 @@ export type ItemMovie = {
    adult?: boolean
    id: number
    backdrop_path?: string
-   genre_ids: number[]
+   genre_ids?: number[]
+   genres?: ItemGenres[]
    original_language?: string
    original_title: string
    overview: string

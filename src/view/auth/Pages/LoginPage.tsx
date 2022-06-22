@@ -10,7 +10,12 @@ import gif from "../../../img/smile.gif";
 export const LoginPage = () => {
   return (
     <>
-      <img className={styles.videoImg} src={gif} alt="" />
+      <img
+        data-testid="login-page"
+        className={styles.videoImg}
+        src={gif}
+        alt=""
+      />
 
       <div className={styles.videoContainer}>
         <div className={styles.videoWrapper}>

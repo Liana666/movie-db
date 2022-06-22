@@ -1,0 +1,21 @@
+.cart__addFavorites {
+    margin-bottom: 20px;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 133.5%;
+    color: #fff;
+
+    text-align: left;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    :hover {
+    cursor: pointer;
+    }
+}

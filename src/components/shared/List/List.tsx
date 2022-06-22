@@ -1,6 +1,5 @@
 import { ItemMovie } from "../../../type/type";
 import { Item } from "../Item/Item";
-import styles from "./List.module.scss";
 
 type Props = {
   data: ItemMovie[];
@@ -8,7 +7,7 @@ type Props = {
 
 export const List: React.FC<Props> = ({ data }) => {
   return (
-    <div className={styles.grid}>
+    <div className="grid">
       {data.length > 0 ? (
         data.map((item) => <Item key={item.id} {...item} />)
       ) : (

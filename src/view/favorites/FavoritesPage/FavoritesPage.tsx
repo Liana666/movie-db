@@ -1,3 +1,9 @@
+import { FavoritesMovieContainer } from "../FavoritesMovie/FavoritesMovieContainer";
+
 export const FavoritesPage = () => {
-  return <div data-testid="favorites-page">Favorites</div>;
+  return (
+    <div className="container" data-testid="favorites-page">
+      <FavoritesMovieContainer />
+    </div>
+  );
 };
